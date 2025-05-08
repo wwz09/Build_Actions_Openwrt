@@ -11,13 +11,14 @@
 name: Build openwrt CM520-KYT
 
 on:
-  repository_dispatch:
+ #自动编译：当Auto-Clean运行完成后
+  workflow_run:
+    workflows: ["Auto-Clean"]
+    types:
+      - completed
   workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+  # schedule:
+    # - cron: 0 19 * * *
 
 env:
   REPO_URL: https://github.com/wwz09/lede
