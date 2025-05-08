@@ -30,7 +30,7 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: lede-CM520-YM
+  FIRMWARE_TAG: lede-CM520-KKT
   TZ: Asia/Shanghai
 
 jobs:
