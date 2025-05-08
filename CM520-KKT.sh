@@ -18,26 +18,25 @@ sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/files/bin/config_generat
 sed -i 's/OpenWrt/CM520/g' package/base-files/files/bin/config_generate
 
 
-# 删除 'lean部分包'
-rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
-rm -rf feeds/luci/applications/luci-app-diskman
-rm -rf feeds/luci/applications/luci-app-accesscontrol
-rm -rf feeds/luci/applications/luci-app-argon-config
-# rm -rf package/feeds/luci/luci-ssl-nginx
+##删除lede部分包'
+rm -rf ./feeds/extraipk/theme/luci-theme-argon-18.06
+rm -rf ./feeds/extraipk/theme/luci-app-argon-config-18.06
+rm -rf ./feeds/extraipk/theme/luci-theme-design
+rm -rf ./feeds/extraipk/theme/luci-theme-edge
+rm -rf ./feeds/extraipk/theme/luci-theme-ifit
+rm -rf ./feeds/extraipk/theme/luci-theme-opentopd
+rm -rf ./feeds/extraipk/theme/luci-theme-neobird
 
-# 修改 luci-theme-argonne 为默认主题
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' ./feeds/luci/collections/luci/Makefile
-sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci-nginx/Makefile
+rm -rf ./package/feeds/extraipk/luci-theme-argon-18.06
+rm -rf ./package/feeds/extraipk/luci-app-argon-config-18.06
+rm -rf ./package/feeds/extraipk/theme/luci-theme-design
+rm -rf ./package/feeds/extraipk/theme/luci-theme-edge
+rm -rf ./package/feeds/extraipk/theme/luci-theme-ifit
+rm -rf ./package/feeds/extraipk/theme/luci-theme-opentopd
+rm -rf ./package/feeds/extraipk/theme/luci-theme-neobird
+rm -rf ./package/feeds/mzwrt_package/luci-app-shadowsocks
 
-# 删除 'lean主题'
-rm -rf feeds/luci/themes/luci-theme-argon
-# rm -rf feeds/luci/themes/luci-theme-bootstrap
-rm -rf feeds/luci/themes/luci-theme-material
-rm -rf feeds/luci/themes/luci-theme-netgear
-rm -rf feeds/luci/themes/luci-theme-argon-mod
-
- # '删除kenzok部分包'
+# '删除kenzok部分包'
 
 rm -rf feeds/kenzok/luci-theme-atmaterial_new
 rm -rf feeds/kenzok/luci-theme-opentopd
@@ -48,6 +47,11 @@ rm -rf feeds/kenzok/luci-app-passwall
 rm -rf feeds/kenzok/luci-app-openclash
 rm -rf feeds/kenzok/luci-theme-argon
 rm -rf feeds/kenzok/luci-app-argon-config
+
+# 修改 luci-theme-argonne 为默认主题
+sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' ./feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci-nginx/Makefile
 
 
 
