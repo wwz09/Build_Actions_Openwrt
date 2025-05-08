@@ -98,11 +98,15 @@ sed -i 's/TTYD 终端/超级终端/g' feeds/luci/applications/luci-app-ttyd/po/z
 # 设置ttyd免帐号登录
 sed -i 's/\/bin\/login/\/bin\/login -f root/' feeds/packages/utils/ttyd/files/ttyd.config
 
+# 设置 root 密码
+
+sed -i 's/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/root:$1$KejhO3Om$wf8JAUSNHj0y2RiewTObe1:20185:0:99999:7:::/g' package/lean/default-settings/files/zzz-default-settings
+
 #'修改WIFI国家区域'
 sed -i 's/US/CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #修改默认无线名称
-sed -i 's/OpenWrt/KYT/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/OpenWrt/CM520-2.4G/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #开启MU-MIMO
 sed -i 's/mu_beamformer=0/mu_beamformer=1/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
