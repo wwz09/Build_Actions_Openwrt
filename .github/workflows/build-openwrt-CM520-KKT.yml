@@ -21,7 +21,7 @@ on:
     # - cron: 0 19 * * *
 
 env:
-  REPO_URL: https://github.com/wwz09/lede
+  REPO_URL: https://github.com/coolsnowwolf/lede.git
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/CM520.config
