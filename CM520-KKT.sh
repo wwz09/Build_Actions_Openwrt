@@ -49,22 +49,27 @@ rm -rf feeds/kenzok/luci-app-openclash
 rm -rf feeds/kenzok/luci-theme-argon
 rm -rf feeds/kenzok/luci-app-argon-config
 
-# '添加argon-config 使用最新argon
-# rm -rf package/lean/luci-theme-argon
-# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 
 
-# 使用原始最新版本
-git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# Git稀疏克隆，只克隆指定目录到本地
+function git_sparse_clone() {
+  branch="$1" repourl="$2" && shift 2
+  git clone --depth=1 -b $branch --single-branch --filter=blob:none --sparse $repourl
+  repodir=$(echo $repourl | awk -F '/' '{print $(NF)}')
+  cd $repodir && git sparse-checkout set $@
+  mv -f $@ ../package
+  cd .. && rm -rf $repodir
+}
 
-# '应用过滤插件'
-git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
+## 添加额外插件
 
-# '管控插件'
-git clone https://github.com/gdck/luci-app-control-weburl.git package/luci-app-control-weburl
-svn co https://github.com/wwz09/openwrt-packages/trunk/luci-app-control-webrestriction package/luci-app-control-webrestriction
-git clone https://github.com/ywt114/luci-app-control-timewol.git package/luci-app-control-timewol
+git_sparse_clone main https://github.com/mzwrt/mzwrt_package_Lite  luci-app-ikoolproxy luci-app-store luci-app-quickstart luci-app-openclash luci-app-easymesh luci-app-ddnsto  luci-theme-argon luci-theme-design luci-app-design-config luci-app-argon-config luci-app-lucky luci-app-smartdns luci-lib-xterm luci-lib-taskd luci-lib-iform
+
+git_sparse_clone main https://github.com/mzwrt/mzwrt_package_Lite  quickstart ucl upx taskd ddnsto filebrowser lua-maxminddb  smartdns upx-static docker lucky luci-app-homeproxy vlmcsd
+
+git_sparse_clone LEDE https://github.com/wwz09/LEDE-IMM-package luci-app-control-timewol luci-app-control-webrestriction luci-app-control-weburl luci-app-timecontrol luci-app-parentcontrol relevance
+
+
 
 # weburl 文件加执行权限
 chmod 7777 files/etc/init.d/weburl 
