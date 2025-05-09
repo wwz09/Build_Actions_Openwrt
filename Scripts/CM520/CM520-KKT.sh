@@ -41,9 +41,9 @@ rm -rf ./package/feeds/mzwrt_package/luci-app-shadowsocks
 rm -rf feeds/kenzok/luci-theme-atmaterial_new
 rm -rf feeds/kenzok/luci-theme-opentopd
 rm -rf feeds/kenzok/luci-theme-tomato
-rm -rf feeds/kenzok/luci-app-ssr-plus
-rm -rf feeds/kenzok/luci-app-passwall2
-rm -rf feeds/kenzok/luci-app-passwall
+rm -rf feeds/mzwrt_packag/luci-app-ssr-plus
+rm -rf feeds/mzwrt_packag/luci-app-passwall2
+rm -rf feeds/mzwrt_packag/luci-app-passwall
 rm -rf feeds/kenzok/luci-app-openclash
 rm -rf feeds/kenzok/luci-theme-argon
 rm -rf feeds/kenzok/luci-app-argon-config
