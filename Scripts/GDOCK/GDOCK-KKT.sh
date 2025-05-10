@@ -122,7 +122,7 @@ sed -i 's/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/root:$1$KejhO3O
 sed -i 's/US/CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #修改默认无线名称
-sed -i 's/OpenWrt/BM520-2.4G/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/LEDE/BM520-2.4G/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #开启MU-MIMO
 sed -i 's/mu_beamformer=0/mu_beamformer=1/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
