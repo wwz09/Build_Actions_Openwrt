@@ -27,6 +27,12 @@ rm -rf ./feeds/extraipk/theme/luci-theme-ifit
 rm -rf ./feeds/extraipk/theme/luci-theme-opentopd
 rm -rf ./feeds/extraipk/theme/luci-theme-neobird
 rm -rf ./feeds/luci/applications/luci-app-upnp
+rm -rf ./feeds/luci/applications/luci-app-ddns
+rm -rf ./feeds/luci/applications/luci-app-passwall
+rm -rf ./feeds/luci/applications/luci-app-passwall2
+rm -rf ./feeds/luci/applications/luci-app-shadowsocks-libev
+
+
 
 rm -rf ./package/feeds/extraipk/luci-theme-argon-18.06
 rm -rf ./package/feeds/extraipk/luci-app-argon-config-18.06
@@ -37,6 +43,7 @@ rm -rf ./package/feeds/extraipk/theme/luci-theme-opentopd
 rm -rf ./package/feeds/extraipk/theme/luci-theme-neobird
 rm -rf ./package/feeds/mzwrt_package/luci-app-shadowsocks
 
+
 # '删除kenzok部分包'
 
 rm -rf feeds/kenzok/luci-theme-atmaterial_new
@@ -45,6 +52,7 @@ rm -rf feeds/kenzok/luci-theme-tomato
 rm -rf feeds/mzwrt_packag/luci-app-ssr-plus
 rm -rf feeds/mzwrt_packag/luci-app-passwall2
 rm -rf feeds/mzwrt_packag/luci-app-passwall
+rm -rf feeds/mzwrt_packag/luci-app-shadowsocks
 rm -rf feeds/kenzok/luci-app-openclash
 rm -rf feeds/kenzok/luci-theme-argon
 rm -rf feeds/kenzok/luci-app-argon-config
