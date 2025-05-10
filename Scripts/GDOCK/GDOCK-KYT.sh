@@ -19,7 +19,7 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 
 
 # '修改默认主机名'
-sed -i 's/OpenWrt/GDOCK-KYT/g' package/base-files/files/bin/config_generate
+sed -i 's/LEDE/GDOCK/g' package/base-files/files/bin/config_generate
 
 
 ##删除lede部分包'
