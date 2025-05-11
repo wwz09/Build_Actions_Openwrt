@@ -17,7 +17,7 @@ sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/luci2/bin/config_generat
 
 ##更改主机名
 sed -i "s/hostname='.*'/hostname='GDOCK'/g" package/base-files/files/bin/config_generate
-
+sed -i "s/hostname='.*'/hostname='GDOCK'/g" package/base-files/luci2/bin/config_generate
 
 ##删除lede部分包'
 rm -rf ./feeds/extraipk/theme/luci-theme-argon-18.06
