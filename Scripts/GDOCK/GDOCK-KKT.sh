@@ -13,7 +13,7 @@
 # '修改默认IP'
 
 sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/files/bin/config_generate
-
+sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/luci2/bin/config_generate
 
 ##更改主机名
 sed -i "s/hostname='.*'/hostname='GDOCK'/g" package/base-files/files/bin/config_generate
@@ -32,6 +32,9 @@ rm -rf ./feeds/luci/applications/luci-app-ddns
 rm -rf ./feeds/luci/applications/luci-app-passwall
 rm -rf ./feeds/luci/applications/luci-app-passwall2
 rm -rf ./feeds/luci/applications/luci-app-shadowsocks-libev
+rm -rf ./feeds/luci/applications/luci-app-accesscontrol
+rm -rf ./feeds/luci/applications/luci-app-cpufreq
+
 
 
 
@@ -43,6 +46,7 @@ rm -rf ./package/feeds/extraipk/theme/luci-theme-ifit
 rm -rf ./package/feeds/extraipk/theme/luci-theme-opentopd
 rm -rf ./package/feeds/extraipk/theme/luci-theme-neobird
 rm -rf ./package/feeds/mzwrt_package/luci-app-shadowsocks
+rm -rf ./package/feeds/mzwrt_package/luci-app-ssr-plus
 
 
 # '删除kenzok部分包'
@@ -77,13 +81,11 @@ function git_sparse_clone() {
 
 ## 添加额外插件
 
-git_sparse_clone main https://github.com/mzwrt/mzwrt_package_Lite  luci-app-ikoolproxy luci-app-store luci-app-quickstart luci-app-openclash luci-app-easymesh luci-app-ddnsto  luci-theme-argon luci-theme-design luci-app-design-config luci-app-argon-config luci-app-lucky luci-app-smartdns luci-lib-xterm luci-lib-taskd luci-lib-iform
+#git_sparse_clone main https://github.com/mzwrt/mzwrt_package_Lite  luci-app-ikoolproxy luci-app-store luci-app-quickstart luci-app-openclash luci-app-easymesh luci-app-ddnsto  luci-theme-argon luci-theme-design luci-app-design-config luci-app-argon-config luci-app-lucky luci-app-smartdns luci-lib-xterm luci-lib-taskd luci-lib-iform
 
-git_sparse_clone main https://github.com/mzwrt/mzwrt_package_Lite  quickstart ucl upx taskd ddnsto filebrowser lua-maxminddb  smartdns upx-static docker lucky luci-app-homeproxy vlmcsd
+# git_sparse_clone main https://github.com/mzwrt/mzwrt_package_Lite  quickstart ucl upx taskd ddnsto filebrowser lua-maxminddb  smartdns upx-static docker lucky luci-app-homeproxy vlmcsd
 
-git_sparse_clone LEDE https://github.com/wwz09/LEDE-IMM-package luci-app-control-timewol luci-app-control-webrestriction luci-app-control-weburl luci-app-timecontrol luci-app-parentcontrol relevance
-
-
+# git_sparse_clone LEDE https://github.com/wwz09/LEDE-IMM-package luci-app-control-timewol luci-app-control-webrestriction luci-app-control-weburl luci-app-timecontrol luci-app-parentcontrol relevance
 
 # weburl 文件加执行权限
 # chmod 7777 files/etc/init.d/weburl 
