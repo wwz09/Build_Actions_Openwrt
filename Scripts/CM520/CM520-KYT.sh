@@ -77,11 +77,11 @@ function git_sparse_clone() {
 
 ## 添加额外插件
 
-git_sparse_clone main https://github.com/mzwrt/mzwrt_package_Lite  luci-app-ikoolproxy luci-app-store luci-app-quickstart luci-app-openclash luci-app-easymesh luci-app-ddnsto  luci-theme-argon luci-theme-design luci-app-design-config luci-app-argon-config luci-app-lucky luci-app-smartdns luci-lib-xterm luci-lib-taskd luci-lib-iform
+#git_sparse_clone main https://github.com/mzwrt/mzwrt_package_Lite  luci-app-ikoolproxy luci-app-store luci-app-quickstart luci-app-openclash luci-app-easymesh luci-app-ddnsto  luci-theme-argon luci-theme-design luci-app-design-config luci-app-argon-config luci-app-lucky luci-app-smartdns luci-lib-xterm luci-lib-taskd luci-lib-iform
 
-git_sparse_clone main https://github.com/mzwrt/mzwrt_package_Lite  quickstart ucl upx taskd ddnsto filebrowser lua-maxminddb  smartdns upx-static docker lucky luci-app-homeproxy vlmcsd
+# git_sparse_clone main https://github.com/mzwrt/mzwrt_package_Lite  quickstart ucl upx taskd ddnsto filebrowser lua-maxminddb  smartdns upx-static docker lucky luci-app-homeproxy vlmcsd
 
-git_sparse_clone LEDE https://github.com/wwz09/LEDE-IMM-package luci-app-control-timewol luci-app-control-webrestriction luci-app-control-weburl luci-app-timecontrol luci-app-parentcontrol relevance
+# git_sparse_clone LEDE https://github.com/wwz09/LEDE-IMM-package luci-app-control-timewol luci-app-control-webrestriction luci-app-control-weburl luci-app-timecontrol luci-app-parentcontrol relevance
 
 # weburl 文件加执行权限
 # chmod 7777 files/etc/init.d/weburl 
