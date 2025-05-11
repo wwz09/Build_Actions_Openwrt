@@ -32,6 +32,9 @@ rm -rf ./feeds/luci/applications/luci-app-ddns
 rm -rf ./feeds/luci/applications/luci-app-passwall
 rm -rf ./feeds/luci/applications/luci-app-passwall2
 rm -rf ./feeds/luci/applications/luci-app-shadowsocks-libev
+rm -rf ./feeds/luci/applications/luci-app-accesscontrol
+rm -rf ./feeds/luci/applications/luci-app-cpufreq
+
 
 
 
@@ -43,6 +46,7 @@ rm -rf ./package/feeds/extraipk/theme/luci-theme-ifit
 rm -rf ./package/feeds/extraipk/theme/luci-theme-opentopd
 rm -rf ./package/feeds/extraipk/theme/luci-theme-neobird
 rm -rf ./package/feeds/mzwrt_package/luci-app-shadowsocks
+rm -rf ./package/feeds/mzwrt_package/luci-app-ssr-plus
 
 
 # '删除kenzok部分包'
