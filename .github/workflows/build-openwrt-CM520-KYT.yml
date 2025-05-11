@@ -26,7 +26,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: Config/CM520.config
   DIY_P1_SH: Scripts/CM520/diy-part1.sh
-  DIY_P2_SH: Scripts/CM520/CM520-KKT.sh
+  DIY_P2_SH: Scripts/CM520/CM520-KYT.sh
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
