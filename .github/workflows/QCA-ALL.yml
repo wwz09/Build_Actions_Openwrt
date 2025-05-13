@@ -40,26 +40,15 @@ jobs:
     uses: ./.github/workflows/WRT-CORE.yml
     with:
       #编译配置
-      WRT_CONFIG: ${{matrix.CONFIG}}
-      #默认主题
-      WRT_THEME: argon
-      #默认主机名
-      WRT_NAME: OWRT
-      #默认WIFI名称
-      WRT_SSID: OWRT
-      #默认WIFI密码
-      WRT_WORD: 12345678
-      #默认地址
-      WRT_IP: 192.168.10.1
-      #默认密码，仅作提示，修改无用
-      WRT_PW: 无
+      WRT_CONFIG: build-openwrt-CM520-KKT
+      WRT_SH：Scripts/CM520/CM520-KKT.sh
+      WRT_CONFIG: build-openwrt-CM520-KYT
+      WRT_SH：Scripts/CM520/CM520-KYT.sh
+      WRT_CONFIG: build-openwrt-GDOCK-KKT
+      WRT_SH：Scripts/GDOCK/GDOCK-KKT.sh
+      WRT_CONFIG: build-openwrt-GDOCK-KYT
+      WRT_SH：Scripts/CM520/CM520-KYT.sh
       #源码链接
       WRT_REPO: https://github.com/${{matrix.SOURCE}}.git
       #源码分支
       WRT_BRANCH: ${{matrix.BRANCH}}
-      #源码名称
-      WRT_SOURCE: ${{matrix.SOURCE}}
-      #插件调整
-      WRT_PACKAGE: ${{inputs.PACKAGE}}
-      #仅输出配置文件
-      WRT_TEST: ${{inputs.TEST}}
